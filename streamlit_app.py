@@ -16,14 +16,16 @@ def icon(emoji: str):
 
 icon("💻")
 
-# Custom red divider using HTML and CSS
+## Custom red divider using HTML and CSS
 divider_red_html = """
 <div style='height: 4px; background: red;'>
 </div>
 """
 
 st.markdown(divider_red_html, unsafe_allow_html=True)
-st.subheader("Groq Chat Simplified", style="color: red;")
+
+# Styled subheader with red color using Markdown
+st.markdown("<h2 style='color: red;'>Groq Chat Simplified</h2>", unsafe_allow_html=True)
 
 client = Groq(
     api_key=st.secrets["GROQ_API_KEY"],
