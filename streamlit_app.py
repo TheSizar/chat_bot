@@ -66,6 +66,15 @@ with col2:
         step=512,
         help=f"Adjust the maximum number of tokens (words) for the model's response. Max for selected model: {max_tokens_range}"
     )
+    # Add temperature slider
+    temperature = st.slider(
+        "Temperature:",
+        min_value=0.0,
+        max_value=2.0,
+        value=0.7,
+        step=0.1,
+        help="Adjust the randomness of the model's output. Lower values make the output more focused and deterministic, higher values make it more diverse and creative."
+    )
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
