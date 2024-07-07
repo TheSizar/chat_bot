@@ -25,7 +25,7 @@ divider_red_html = """
 st.markdown(divider_red_html, unsafe_allow_html=True)
 
 # Styled subheader with red color using Markdown
-st.markdown("<h2 style='color: red;'>Groq Chat Simplified</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='color: white;'>Groq Chat Simplified</h2>", unsafe_allow_html=True)
 
 client = Groq(
     api_key=st.secrets["GROQ_API_KEY"],
