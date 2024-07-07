@@ -2,7 +2,7 @@ import streamlit as st
 from typing import Generator
 from groq import Groq
 
-st.set_page_config(page_icon="💬", layout="wide",
+st.set_page_config(page_icon="🚀", layout="wide",
                    page_title="Let's go!")
 
 
@@ -14,9 +14,16 @@ def icon(emoji: str):
     )
 
 
-icon("🏎️")
+icon("💻")
 
-st.subheader("Groq Chat Streamlit App", divider="rainbow", anchor=False)
+# Custom red divider using HTML and CSS
+divider_red_html = """
+<div style='height: 4px; background: red;'>
+</div>
+"""
+
+st.markdown(divider_red_html, unsafe_allow_html=True)
+st.subheader("Groq Chat Simplified", style="color: red;")
 
 client = Groq(
     api_key=st.secrets["GROQ_API_KEY"],
